@@ -1,0 +1,6 @@
+{
+  "name": "Yegesha Coffee Digital Menu",
+  "description": "A premium digital menu for Yegesha Coffee, featuring specialty Ethiopian Gesha coffee, farm-to-cup traceability, and luxury café aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-forest: #1B3022;
+  --color-forest-dark: #0f1d15;
+  --color-gold: #C5A059;
+  --color-gold-light: #dfc89d;
+  --color-cream: #EDA40E;
+  --color-warm-brown: #3d2b1f;
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  --animate-spin-slow: spin-slow 8s linear infinite;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-forest font-sans selection:bg-gold selection:text-white;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .tracking-luxury {
+    @apply tracking-[0.2em] uppercase;
+  }
+  
+  .tracking-prestige {
+    @apply tracking-[0.4em] uppercase;
+  }
+
+  .border-prestige {
+    @apply border-b border-gold/40 pb-2;
+  }
+}
