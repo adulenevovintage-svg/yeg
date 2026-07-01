@@ -6,9 +6,10 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/cafe_interior_1782837348654.jpg" 
+          src="https://user15514.na.imgto.link/public/20260701/cafe.avif" 
           alt="Yegesha Coffee Interior" 
           className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-forest/40 backdrop-brightness-75" />
       </div>

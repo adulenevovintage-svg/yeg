@@ -35,7 +35,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Rich and balanced extraction using our La Marzocco Strada AV.',
     price: 600,
     category: 'Espresso',
-    image: '/images/espresso_shot_macro_1782846644927.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/macch.avif'
   },
   {
     id: 'esp-2',

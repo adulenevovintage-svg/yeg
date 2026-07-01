@@ -96,9 +96,10 @@ function AppContent() {
         <section className="relative h-[60vh] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/images/cafe_interior_1782837348654.jpg" 
+              src="https://user15514.na.imgto.link/public/20260701/cafe.avif" 
               alt="Yegesha Café" 
               className="w-full h-full object-cover grayscale opacity-30"
+              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-cream/90" />
           </div>
