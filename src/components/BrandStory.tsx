@@ -72,7 +72,7 @@ export default function BrandStory() {
               transition={{ duration: 1 }}
             >
               <img 
-                src="/src/assets/images/espresso_machine_detail_1782837371472.jpg" 
+                src="/images/espresso_machine_detail_1782837371472.jpg" 
                 alt="La Marzocco Strada AV" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

@@ -4,7 +4,7 @@ import { useMenu } from '../MenuContext';
 import { Settings, X, Lock, LogOut, CheckCircle2 } from 'lucide-react';
 
 export default function AdminPanel() {
-  const { isAdmin, login, logout } = useMenu();
+  const { isAdmin, login, logout, resetMenu } = useMenu();
   const [isOpen, setIsOpen] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -98,7 +98,7 @@ export default function AdminPanel() {
       <AnimatePresence>
         {isAdmin && (
           <motion.div 
-            className="fixed top-6 left-1/2 -translate-x-1/2 z-[70] pointer-events-none"
+            className="fixed top-6 left-1/2 -translate-x-1/2 z-[70] flex items-center gap-3"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
@@ -107,6 +107,17 @@ export default function AdminPanel() {
               <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
               <span className="text-white font-sans text-[9px] font-bold tracking-[0.2em] uppercase">Admin Mode Active</span>
             </div>
+            
+            <button 
+              onClick={() => {
+                if (window.confirm("Are you sure you want to reset all menu items and image paths to the latest defaults?")) {
+                  resetMenu();
+                }
+              }}
+              className="bg-forest/90 backdrop-blur-md text-gold px-4 py-2.5 rounded-full border border-gold/20 hover:bg-gold hover:text-forest transition-all text-[9px] font-bold uppercase tracking-[0.2em] shadow-lg pointer-events-auto"
+            >
+              Reset Menu
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

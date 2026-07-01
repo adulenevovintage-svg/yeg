@@ -110,6 +110,7 @@ export default function MenuItemCard({ item }: { item: MenuItem, key?: Key }) {
             src={item.image} 
             alt={item.name} 
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+            referrerPolicy="no-referrer"
           />
         </div>
       )}

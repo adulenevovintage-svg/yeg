@@ -41,7 +41,7 @@ export default function Logo({ className = "", inverted = false }: { className?:
         <img 
           src="https://user15514.na.imgto.link/public/20260630/yogo.avif" 
           alt="Yegesha Coffee Logo" 
-          className={`w-full h-auto object-contain transition-all duration-500 ${inverted ? 'brightness-0 invert' : ''} group-hover:drop-shadow-[0_10px_20px_rgba(197,160,89,0.4)]`}
+          className={`w-full h-auto object-contain transition-all duration-500 ${inverted ? 'invert mix-blend-screen' : 'mix-blend-multiply'} group-hover:drop-shadow-[0_10px_20px_rgba(197,160,89,0.4)]`}
           referrerPolicy="no-referrer"
         />
       </motion.div>

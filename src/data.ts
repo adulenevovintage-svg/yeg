@@ -9,7 +9,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 850,
     category: 'Signature Ethiopian Coffee',
     featured: true,
-    image: '/src/assets/images/specialty_coffee_pour_over_1782837360316.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/macch.avif'
   },
   {
     id: 'sig-2',
@@ -35,7 +35,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Rich and balanced extraction using our La Marzocco Strada AV.',
     price: 600,
     category: 'Espresso',
-    image: '/src/assets/images/espresso_shot_macro_1782846644927.jpg'
+    image: '/images/espresso_shot_macro_1782846644927.jpg'
   },
   {
     id: 'esp-2',
@@ -53,7 +53,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Espresso "marked" with a dollop of silky steamed milk.',
     price: 650,
     category: 'Milk Based Espresso',
-    image: '/src/assets/images/latte_art_premium_1782846657567.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/macch.avif'
   },
   {
     id: 'milk-2',
@@ -69,7 +69,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Classic balance of espresso, steamed milk, and airy foam.',
     price: 720,
     category: 'Milk Based Espresso',
-    image: '/src/assets/images/latte_art_premium_1782846657567.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/macch.avif'
   },
   {
     id: 'milk-4',
@@ -77,7 +77,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Smooth and creamy espresso with a light layer of micro-foam.',
     price: 750,
     category: 'Milk Based Espresso',
-    image: '/src/assets/images/latte_art_premium_1782846657567.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/macch.avif'
   },
   {
     id: 'milk-5',
@@ -95,7 +95,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Chilled espresso and milk with house-made caramel syrup over ice.',
     price: 780,
     category: 'Iced Coffee',
-    image: '/src/assets/images/iced_caramel_latte_luxury_1782846669428.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/macch.avif'
   },
 
   // Brewed Coffee
@@ -113,7 +113,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Hand-brewed precision coffee highlighting the delicate floral acidity of Gesha.',
     price: 820,
     category: 'Brewed Coffee',
-    image: '/src/assets/images/pour_over_hand_brewed_1782846680210.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/macch.avif'
   },
 
   // Tea
@@ -133,7 +133,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Savory crepe filled with tender chicken, house-made pesto, and melted cheese.',
     price: 850,
     category: 'Breakfast',
-    image: '/src/assets/images/breakfast_crepe_1782837381701.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/cora.avif'
   },
   {
     id: 'bf-2',
@@ -141,7 +141,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Authentic Ethiopian teff crepe with fluffy eggs and fresh sliced avocado.',
     price: 780,
     category: 'Breakfast',
-    image: '/src/assets/images/teff_crepe_premium_1782846692592.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/cora.avif'
   },
   {
     id: 'bf-3',
@@ -159,7 +159,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Thin crepes served with chocolate hazelnut spread or seasonal fruit.',
     price: 750,
     category: 'Desserts',
-    image: '/src/assets/images/sweet_pastry_1782837412188.jpg'
+    image: 'https://user15514.na.imgto.link/public/20260630/cora.avif'
   },
   {
     id: 'ds-2',

@@ -10,6 +10,7 @@ interface MenuContextType {
   updateItem: (item: MenuItem) => void;
   addItem: (item: MenuItem) => void;
   removeItem: (id: string) => void;
+  resetMenu: () => void;
 }
 
 const MenuContext = createContext<MenuContextType | undefined>(undefined);
@@ -21,7 +22,22 @@ export function MenuProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const savedMenu = localStorage.getItem('yegesha_menu');
     if (savedMenu) {
-      setMenuItems(JSON.parse(savedMenu));
+      try {
+        const parsed: MenuItem[] = JSON.parse(savedMenu);
+        const migrated = parsed.map(item => {
+          const defaultItem = INITIAL_MENU_ITEMS.find(i => i.id === item.id);
+          if (defaultItem) {
+            // Automatically update images of default items if they are local paths or old URLs
+            if (item.image !== defaultItem.image) {
+              return { ...item, image: defaultItem.image, name: defaultItem.name };
+            }
+          }
+          return item;
+        });
+        setMenuItems(migrated);
+      } catch (e) {
+        setMenuItems(INITIAL_MENU_ITEMS);
+      }
     } else {
       setMenuItems(INITIAL_MENU_ITEMS);
     }
@@ -64,8 +80,13 @@ export function MenuProvider({ children }: { children: ReactNode }) {
     setMenuItems(prev => prev.filter(item => item.id !== id));
   };
 
+  const resetMenu = () => {
+    setMenuItems(INITIAL_MENU_ITEMS);
+    localStorage.setItem('yegesha_menu', JSON.stringify(INITIAL_MENU_ITEMS));
+  };
+
   return (
-    <MenuContext.Provider value={{ menuItems, isAdmin, login, logout, updateItem, addItem, removeItem }}>
+    <MenuContext.Provider value={{ menuItems, isAdmin, login, logout, updateItem, addItem, removeItem, resetMenu }}>
       {children}
     </MenuContext.Provider>
   );

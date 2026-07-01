@@ -9,6 +9,7 @@ import AdminPanel from './components/AdminPanel';
 import { CheckCircle2 } from 'lucide-react';
 import { OrderProvider } from './OrderContext';
 import { MenuProvider, useMenu } from './MenuContext';
+import { Section } from './types';
 
 export default function App() {
   return (
@@ -24,15 +25,15 @@ function AppContent() {
   const { menuItems } = useMenu();
   
   // Group menu items by category for the UI
-  const sections = [
-    { title: 'Signature Ethiopian Coffee', items: menuItems.filter(i => i.category === 'Signature Ethiopian Coffee') },
-    { title: 'Espresso', items: menuItems.filter(i => i.category === 'Espresso') },
-    { title: 'Milk Based Espresso', items: menuItems.filter(i => i.category === 'Milk Based Espresso') },
-    { title: 'Brewed Coffee', items: menuItems.filter(i => i.category === 'Brewed Coffee') },
-    { title: 'Iced Coffee', items: menuItems.filter(i => i.category === 'Iced Coffee') },
-    { title: 'Tea', items: menuItems.filter(i => i.category === 'Tea') },
-    { title: 'Breakfast', items: menuItems.filter(i => i.category === 'Breakfast') },
-    { title: 'Desserts', items: menuItems.filter(i => i.category === 'Desserts') },
+  const sections: Section[] = [
+    { id: 'Signature Ethiopian Coffee', title: 'Signature Ethiopian Coffee', items: menuItems.filter(i => i.category === 'Signature Ethiopian Coffee') },
+    { id: 'Espresso', title: 'Espresso', items: menuItems.filter(i => i.category === 'Espresso') },
+    { id: 'Milk Based Espresso', title: 'Milk Based Espresso', items: menuItems.filter(i => i.category === 'Milk Based Espresso') },
+    { id: 'Brewed Coffee', title: 'Brewed Coffee', items: menuItems.filter(i => i.category === 'Brewed Coffee') },
+    { id: 'Iced Coffee', title: 'Iced Coffee', items: menuItems.filter(i => i.category === 'Iced Coffee') },
+    { id: 'Tea', title: 'Tea', items: menuItems.filter(i => i.category === 'Tea') },
+    { id: 'Breakfast', title: 'Breakfast', items: menuItems.filter(i => i.category === 'Breakfast') },
+    { id: 'Desserts', title: 'Desserts', items: menuItems.filter(i => i.category === 'Desserts') },
   ];
 
   return (
@@ -95,7 +96,7 @@ function AppContent() {
         <section className="relative h-[60vh] flex items-center justify-center">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/src/assets/images/cafe_interior_1782837348654.jpg" 
+              src="/images/cafe_interior_1782837348654.jpg" 
               alt="Yegesha Café" 
               className="w-full h-full object-cover grayscale opacity-30"
             />
